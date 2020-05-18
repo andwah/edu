@@ -1,0 +1,32 @@
+<div class="pagecontaner">
+  <h1>Welcome</h1>
+  <p>
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean egestas
+    pulvinar nisi. Mauris quam ex, tincidunt eget dolor non, finibus malesuada
+    ante. Nunc sed tristique odio
+  </p>
+
+  <div class="buttonContainer">
+    <button
+      mat-raised-button
+      color="primary"
+      [routerLink]="['registration-name']"
+      [queryParams]="{ redirectTo: '/' }"
+    >
+      Start
+    </button>
+
+    <button disabled mat-stroked-button>Sign in with code</button>
+
+    <button disabled mat-stroked-button color="primary">
+      Sign in as organizer
+    </button>
+  </div>
+</div>
+
+<!-- <mat-grid-list cols="2" rowHeight="2:1">
+  <mat-grid-tile>1</mat-grid-tile>
+  <mat-grid-tile>2</mat-grid-tile>
+  <mat-grid-tile>3</mat-grid-tile>
+  <mat-grid-tile>4</mat-grid-tile>
+</mat-grid-list> -->

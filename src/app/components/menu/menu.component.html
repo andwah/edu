@@ -1,0 +1,11 @@
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <span *ngIf="headerService.backButtonVisibility">
+      <button mat-icon-button>
+        <mat-icon (click)="backClick()">arrow_back</mat-icon>
+      </button>
+    </span>
+    <!-- <span class="example-spacer"></span> -->
+    <span class="fill-remaining-space">{{ title }}</span>
+  </mat-toolbar-row>
+</mat-toolbar>

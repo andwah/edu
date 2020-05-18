@@ -1,0 +1,27 @@
+<p>{{pageTitle}}</p>
+
+<form [formGroup]="registrationForm" (ngSubmit)="onSubmit(registrationForm.value)">
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Name</mat-label> 
+        <input matInput placeholder="Ex. Nisse Nilsson" formControlName="name">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Year</mat-label> 
+        <input matInput type="number" placeholder="Ex. 2011" formControlName="year">
+      </mat-form-field>      
+      <mat-form-field>
+        <mat-label>Select month</mat-label>
+        <mat-select formControlName="selectedMonth">
+          <mat-option  *ngFor="let month of months,let i = index" [value]="i+1">
+            {{month}}
+          </mat-option>
+        </mat-select>          
+      </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Continue</button>
+</form>
+
+<!-- <button mat-raised-button (click)="onNavigationToMenu()" >Back</button> -->
+
